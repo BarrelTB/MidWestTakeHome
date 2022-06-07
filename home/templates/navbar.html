@@ -1,0 +1,30 @@
+{% load static %}
+<nav class="navbar navbar-dark bg-transparent">
+
+<div id="logodiv">
+  <img class="navlogo" src="{% static 'logos/Logo.png'" %}">
+</div>
+<div id="navdiv">
+
+</div>
+ <script>
+   var nav = document.getElementById("navdiv");
+   var navclick = document.createElement("a");
+
+   var cururl = new URL(window.location.href).toString();
+
+   if(cururl.includes('contact')) {
+    navclick.setAttribute('href', 'home:home');
+     navclick.href = "{% url 'home:home' %}";
+     navclick.textContent = 'Home';
+   } else {
+    navclick.setAttribute('href', 'contact');
+     navclick.href = "{% url 'home:contact' %}";
+     navclick.textContent = 'Contact';
+   }
+
+   nav.appendChild(navclick);
+
+ </script>
+
+</nav>
