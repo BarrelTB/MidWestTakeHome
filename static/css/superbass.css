@@ -2,6 +2,171 @@ body {
     background-color: #222222;
 }
 
-.naviglogo {
-    margin: 15%;
+#contact-body {
+    background-image: linear-gradient(to left, white, white 50%, #222222 50%, #222222);
+}
+
+#logodiv{
+    width: auto;
+    padding-left: 7.5%;
+    padding-top: 2.5%;
+    
+}
+
+#navdiv {
+    width: auto;
+    padding-right: 7.5%;
+    padding-top: 2.5%;
+    
+}
+
+#navhref {
+    color: #DEBF79;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#cardsection {
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.card {
+    height: 400px;
+    width: 400px;
+    float: left;
+    margin: 2.5%;
+    text-align: center; 
+}
+
+.card-img-top {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40%;
+    max-width: fit-content;
+    max-height: fit-content;
+    justify-content: center;
+    display: block;
+}
+
+.card-img-div {
+    height: 30%;
+    display: block;
+    margin: auto;
+
+}
+
+.card-body-text {
+    max-height: 100%;
+    margin: auto;
+    position: relative;
+    display: block;
+
+}
+
+.card-body-btn {
+    max-height: 100%;
+    margin: auto;
+    padding-top: 5%;
+    position: relative;
+    display: block;
+
+}
+
+.card-body {
+    padding: 10%;
+    
+}
+
+.btn {
+    border-radius: 0% !important;
+    background-color: #DEBF79;
+    border: none !important;
+}
+
+h2, p {
+    text-align: left;
+}
+
+h1 {
+    position: relative;
+    color: white;
+    font-weight: bolder;
+    float: left;
+    margin: .5%;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.par-body {
+    width: 100%;
+}
+
+.par-body-text{
+    color: white;
+    font-weight: bold;
+    padding: 2.5%;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    padding-left: 2%;
+    bottom: 0; left: 2%;
+    width: 125px;
+    height: 3px;
+    background-color: #DEBF79;
+}
+
+.contact-body {
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 39%;
+    float: left;
+}
+
+.contact-body-par {
+    width: 75%;
+    color: white;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.contact-form {
+    width: 39%;
+    float: left;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.contact-form-head {
+    color: #222222;
+    font-weight: bolder;
+    margin-left: 4%;
+}
+
+body {
+    background-image: linear-gradient(to-right, white, white 50%, #222222 50%, #222222);
+}
+
+#con-form-ent {
+    margin: 2%;
+
+}
+
+#con-form-mes {
+    max-width: 92%;
+    margin-left: 4%;
+}
+
+#con-form-sub {
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.name-challenge-par {
+    color: white;
+    margin-right: 2%;
 }

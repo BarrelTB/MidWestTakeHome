@@ -1,9 +1,40 @@
 <!doctype html>
 <html lang="en">
     {% include "head.html" %}
-  <body class="main_body">
+  <body class="main_body" id="contact-body">
     {% include "navbar.html" %}
-    <h1>Hello, world!</h1>
+    <div class="contact-body">
+        <h1 class="contact-body-head">Heading One</h1>
+        <div class="contact-body-par">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do dos eiusmod tempor incididunt ut labore et trace dolore manga aliqua.</p>
+            <p>Proin sagittis nisl rhoncus mattis rhoncus. at augue eget arcu dictum varius duis at consectetur lorem.</p>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h2 class="contact-form-head">Heading Two</h2>
+        <div class="row" id="con-form-ent">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+        </div>
+        <div class="row" id="con-form-ent">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Title" aria-label="Title">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+            </div>
+        </div>
+        <div class="row" id="con-form-mes">
+            <input type="text" class="form-control" placeholder="Message" aria-label="Message">  
+        </div>
+        <div class="card-body-btn" id="con-form-sub">
+            <a href="#" class="btn btn-primary">Submit</a>
+        </div>
+    </div>
     {% include "scripts.html" %}
   </body>
 </html>
