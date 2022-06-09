@@ -5,17 +5,17 @@
   <body class="main_body">
     {% include "navbar.html" %}
     <div class="cardsection">
-
+      {%for item in listData %}
       <div class="card">
         <div class="card-img-div">
 
-          <img src="{% static 'logos/Talkie.png'" %}" class="card-img-top" alt="...">
+          <img src="{{ item.img }}" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <div class="card-body-text">
 
-            <h2 class="card-title">Heading Two</h2>
-            <p class="card-text">Integer accumsan molestie nisl, id faucibus urna accumsan quis. Proin vulpate, mauris maximus.</p>
+            <h2 class="card-title">{{ item.title }}</h2>
+            <p class="card-text">{{ item.text }} </p>
           </div>
           <div class="card-body-btn">
 
@@ -23,37 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-img-div">
-          <img src="{% static 'logos/Rabbit.png'" %}" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-          <div class="card-body-text">
-            <h2 class="card-title">Heading Two</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-          </div>
-          <div class="card-body-btn">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img-div">
-
-          <img src="{% static 'logos/Shield.png'" %}" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-          <div class="card-body-text">
-
-            <h2 class="card-title">Heading Two</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-          </div>
-          <div class="card-body-btn">
-
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <div class="par-body" id="par-body-script-challenge">
 

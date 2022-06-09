@@ -11,30 +11,76 @@
         </div>
     </div>
     <div class="contact-form">
+      <form name="contactform" id="contactform">
+
         <h2 class="contact-form-head">Heading Two</h2>
         <div class="row" id="con-form-ent">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            </div>
+          <div class="col">
+            <input name="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name" >
+          </div>
+          <div class="col">
+            <input name="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name" >
+          </div>
         </div>
         <div class="row" id="con-form-ent">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Title" aria-label="Title">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Email" aria-label="Email">
-            </div>
+          <div class="col">
+            <input name="title" type="text" class="form-control" placeholder="Title" aria-label="Title" >
+          </div>
+          <div class="col">
+            <input name="email" id="emailfield" type="email" class="form-control" placeholder="Email" aria-label="Email" >
+          </div>
         </div>
         <div class="row" id="con-form-mes">
-            <input type="text" class="form-control" placeholder="Message" aria-label="Message">  
+          <input name="message" type="text" class="form-control" placeholder="Message" aria-label="Message" >  
         </div>
         <div class="card-body-btn" id="con-form-sub">
-            <a href="#" class="btn btn-primary">Submit</a>
+          <input name="send" id="submitbtn" type="submit" class="btn btn-primary" value="Submit">
         </div>
+      </form>
     </div>
     {% include "scripts.html" %}
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        console.log('in the main function');
+
+        var frm = $('#contactform');
+        frm.submit(function (ev) {
+          $.ajax({
+            type: 'post',
+            url: 'http://localhost:8000/api/submitcontact/',
+            data: getFormData(frm),
+            success: function(data) {
+              alert('Successfully submitted form data');
+              frm.find('input:text').val('');
+              $('#emailfield').val('');
+            }
+          });
+          ev.preventDefault();
+
+        });
+
+        function getFormData($form) {
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function(n, i) {
+          indexed_array[n['name']] = n['value'];
+        });
+
+        console.log(indexed_array);
+
+        return indexed_array;
+        }
+
+      });
+
+      
+      
+
+
+    </script>
+    
   </body>
 </html>
